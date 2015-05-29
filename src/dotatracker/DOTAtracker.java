@@ -5,13 +5,17 @@
  */
 package dotatracker;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -20,25 +24,34 @@ import javafx.stage.Stage;
 public class DOTAtracker extends Application {
     
     @Override
-    public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
-        Scene scene = new Scene(root, 300, 250);
-        
-        primaryStage.setTitle("Hello World!");
+    public void start(Stage primaryStage) throws IOException {
+     
+        try {
+        Parent root;
+	root = FXMLLoader.load(getClass().getResource("/gui/login.fxml"));
+        Scene scene = new Scene(root, 450, 300);
         primaryStage.setScene(scene);
+        primaryStage.centerOnScreen();
+        primaryStage.setTitle("DOTA tracker");
+        primaryStage.setResizable(false);
         primaryStage.show();
+        }catch (Exception e) {
+            System.err.print("NECEEEEE");
+        }
+        
+        
+       
+        
+//        Parent root;
+//		root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
+//		Scene scene = new Scene(root, 450, 300);
+//		primaryStage.setScene(scene);
+//		primaryStage.setTitle("Login");
+//		primaryStage.initStyle(StageStyle.UNDECORATED);
+//		primaryStage.show();
+//        
+        
+        
     }
 
     /**

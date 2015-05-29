@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dotatracker.LoginController">
+   <children>
+      <HBox layoutX="248.0" layoutY="258.0">
+         <children>
+            <Button fx:id="potvrdiLog" layoutX="164.0" layoutY="269.0" mnemonicParsing="false" onAction="#potvrdiAkcija" text="potvrdi" />
+            <Button fx:id="otkaziLog" layoutX="293.0" layoutY="257.0" mnemonicParsing="false" text="otkazi" />
+         </children>
+      </HBox>
+      <PasswordField fx:id="korSifra" layoutX="302.0" layoutY="157.0" />
+      <TextField fx:id="korIme" layoutX="302.0" layoutY="91.0" />
+   </children>
+</AnchorPane>

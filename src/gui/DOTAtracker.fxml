@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="28.0" prefWidth="600.0" AnchorPane.bottomAnchor="372.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Izmeni">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Dodaj">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutY="28.0" prefHeight="372.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Igrač">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="183.0" prefWidth="213.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="94.0" layoutY="58.0" prefHeight="343.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox layoutX="133.0" layoutY="37.0" spacing="10.0">
+                                       <children>
+                                          <TextField layoutX="89.0" layoutY="54.0" />
+                                          <TextField layoutX="99.0" layoutY="64.0" />
+                                          <TextField layoutX="109.0" layoutY="74.0" />
+                                          <TextField layoutX="119.0" layoutY="84.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="29.0" layoutY="40.0" spacing="19.0">
+                                       <children>
+                                          <Label layoutX="26.0" layoutY="37.0" text="Ime" />
+                                          <Label layoutX="36.0" layoutY="47.0" text="Uloga" />
+                                          <Label layoutX="46.0" layoutY="57.0" text="Godine" />
+                                          <Label layoutX="56.0" layoutY="67.0" text="Omiljeni heroj" />
+                                       </children>
+                                    </VBox>
+                                    <HBox layoutX="81.0" layoutY="245.0" spacing="30.0">
+                                       <children>
+                                          <Button layoutX="58.0" layoutY="249.0" mnemonicParsing="false" text="Dodaj" />
+                                          <Button layoutX="68.0" layoutY="259.0" mnemonicParsing="false" text="Obriši" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView layoutX="14.0" layoutY="40.0" prefHeight="341.0" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="C1" />
+                                        <TableColumn prefWidth="75.0" text="C2" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Tim">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="176.0" layoutY="75.0" prefHeight="343.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox layoutX="133.0" layoutY="37.0" spacing="10.0">
+                                       <children>
+                                          <TextField layoutX="91.0" layoutY="78.0" />
+                                          <TextField layoutX="101.0" layoutY="88.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="29.0" layoutY="40.0" spacing="19.0">
+                                       <children>
+                                          <Label layoutX="33.0" layoutY="37.0" text="Ime tima" />
+                                          <Label layoutX="43.0" layoutY="47.0" text="Zemlja tima" />
+                                       </children>
+                                    </VBox>
+                                    <HBox layoutX="81.0" layoutY="245.0" spacing="30.0">
+                                       <children>
+                                          <Button layoutX="66.0" layoutY="229.0" mnemonicParsing="false" text="Dodaj" />
+                                          <Button layoutX="156.0" layoutY="229.0" mnemonicParsing="false" text="Obriši" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView prefHeight="341.0" prefWidth="296.0">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="C1" />
+                                          <TableColumn prefWidth="75.0" text="C2" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Heroj">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="137.0" layoutY="52.0" prefHeight="343.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox layoutX="133.0" layoutY="37.0" spacing="10.0">
+                                       <children>
+                                          <TextField layoutX="30.0" layoutY="55.0" />
+                                          <TextField layoutX="40.0" layoutY="65.0" />
+                                          <TextField layoutX="50.0" layoutY="75.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="29.0" layoutY="40.0" spacing="19.0">
+                                       <children>
+                                          <Label layoutX="42.0" layoutY="37.0" text="Ime" />
+                                          <Label layoutX="52.0" layoutY="47.0" text="Uloga" />
+                                          <Label layoutX="62.0" layoutY="57.0" text="Tip heroja" />
+                                       </children>
+                                    </VBox>
+                                    <HBox layoutX="81.0" layoutY="245.0" spacing="30.0">
+                                       <children>
+                                          <Button layoutX="59.0" layoutY="237.0" mnemonicParsing="false" text="Dodaj" />
+                                          <Button layoutX="156.0" layoutY="237.0" mnemonicParsing="false" text="Obriši" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView prefHeight="341.0" prefWidth="296.0">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="C1" />
+                                          <TableColumn prefWidth="75.0" text="C2" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
