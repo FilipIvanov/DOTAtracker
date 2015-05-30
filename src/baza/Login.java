@@ -21,7 +21,7 @@ private static Connection createConnection() {
     try {
         Class.forName("com.mysql.jdbc.Driver");
         return DriverManager.getConnection(
-                "jdbc:mysql://sql5.freesqldatabase.com:3306/login", "sql578801", "qC5!tL7%");
+                "jdbc:mysql://sql5.freesqldatabase.com:3306/sql578801", "sql578801", "qC5!tL7%");
     } catch (Exception e) {
         return null;
     }

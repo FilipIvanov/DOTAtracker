@@ -40,14 +40,15 @@ public class LoginController implements Initializable {
     private Button otkaziLog;
 
     private Connection conn = null;
-    private PreparedStatement ps = null;
     private ResultSet rs = null;
+    private java.sql.PreparedStatement ps = null;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+    /**
+     * Initializes the controller class.
+     */
+    public void initialize(URL url, ResourceBundle rb) {
         conn = Login.get();
-
+       
     }
 
     public void potvrdiAkcija(ActionEvent event) throws SQLException, IOException   {
@@ -66,17 +67,14 @@ public class LoginController implements Initializable {
             if (rs.next()) {
 
                 Parent root = FXMLLoader.load(getClass().getResource(
-                        "DOTAtracker.fxml"));
+                        "/gui/DOTAtracker.fxml"));
                 Stage core = new Stage();
                 core.setScene(new Scene(root));
                 core.setTitle("Core");
                 core.show();
-                
-                
             }
-            
-
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
             e.printStackTrace();
 
         }
