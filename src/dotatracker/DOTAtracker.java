@@ -35,6 +35,10 @@ public class DOTAtracker extends Application {
         primaryStage.setTitle("DOTA tracker");
         primaryStage.setResizable(false);
         primaryStage.show();
+        
+      
+        
+        
         }catch (Exception e) {
             System.err.print("NECEEEEE");
         }
@@ -42,15 +46,7 @@ public class DOTAtracker extends Application {
         
        
         
-//        Parent root;
-//		root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
-//		Scene scene = new Scene(root, 450, 300);
-//		primaryStage.setScene(scene);
-//		primaryStage.setTitle("Login");
-//		primaryStage.initStyle(StageStyle.UNDECORATED);
-//		primaryStage.show();
-//        
-        
+
         
     }
 

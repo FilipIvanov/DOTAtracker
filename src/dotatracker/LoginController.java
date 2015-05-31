@@ -6,14 +6,18 @@
 package dotatracker;
 
 import baza.Login;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -72,6 +76,11 @@ public class LoginController implements Initializable {
                 core.setScene(new Scene(root));
                 core.setTitle("Core");
                 core.show();
+                Stage login = (Stage) otkaziLog.getScene().getWindow();
+                login.close();
+            }
+            else { 
+                ukloniProzor();
             }
         } 
         catch (Exception e) {
@@ -79,4 +88,23 @@ public class LoginController implements Initializable {
 
         }
     }
+    
+    public void ukloniProzor () throws IOException {
+    
+        Parent root = FXMLLoader.load(getClass().getResource(
+                "/gui/neispravanLogin.fxml"));
+        Stage errorStage = new Stage();
+        errorStage.setScene(new Scene(root));
+        errorStage.setTitle("Pogresan unos");
+        errorStage.centerOnScreen();
+        errorStage.show();
+    }
+    
+    public void otkaziAkcija(ActionEvent event) {
+        Stage stage = (Stage) otkaziLog.getScene().getWindow();
+        stage.close();
+    
+    }
+    
+    
 }

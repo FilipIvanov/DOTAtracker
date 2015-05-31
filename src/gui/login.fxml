@@ -8,13 +8,23 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dotatracker.LoginController">
    <children>
-      <HBox layoutX="248.0" layoutY="258.0">
+      <HBox layoutX="234.0" layoutY="266.0" spacing="30.0">
          <children>
-            <Button fx:id="potvrdiLog" layoutX="164.0" layoutY="269.0" mnemonicParsing="false" onAction="#potvrdiAkcija" text="potvrdi" />
-            <Button fx:id="otkaziLog" layoutX="293.0" layoutY="257.0" mnemonicParsing="false" text="otkazi" />
+            <Button fx:id="potvrdiLog" layoutX="164.0" layoutY="269.0" mnemonicParsing="false" onAction="#potvrdiAkcija" text="Potvrdi" />
+            <Button fx:id="otkaziLog" layoutX="293.0" layoutY="257.0" mnemonicParsing="false" onAction="#otkaziAkcija" text="Otkaži" />
          </children>
       </HBox>
-      <PasswordField fx:id="korSifra" layoutX="302.0" layoutY="157.0" />
-      <TextField fx:id="korIme" layoutX="302.0" layoutY="91.0" />
+      <VBox layoutX="225.0" layoutY="123.0" spacing="35.0">
+         <children>
+            <TextField fx:id="korIme" layoutX="302.0" layoutY="91.0" />
+            <PasswordField fx:id="korSifra" layoutX="302.0" layoutY="157.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="77.0" layoutY="134.0" spacing="40.0">
+         <children>
+            <Label layoutX="73.0" layoutY="137.0" text="Korisničko ime" />
+            <Label layoutX="73.0" layoutY="192.0" text="Lozinka" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
