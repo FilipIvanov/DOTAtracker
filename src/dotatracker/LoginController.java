@@ -74,7 +74,7 @@ public class LoginController implements Initializable {
                         "/gui/DOTAtracker.fxml"));
                 Stage core = new Stage();
                 core.setScene(new Scene(root));
-                core.setTitle("Core");
+                core.setTitle("DOTAtracker");
                 core.show();
                 Stage login = (Stage) otkaziLog.getScene().getWindow();
                 login.close();
