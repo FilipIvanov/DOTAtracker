@@ -6,18 +6,13 @@
 package dotatracker;
 
 import baza.Login;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -52,10 +47,10 @@ public class LoginController implements Initializable {
      */
     public void initialize(URL url, ResourceBundle rb) {
         conn = Login.get();
-       
+
     }
 
-    public void potvrdiAkcija(ActionEvent event) throws SQLException, IOException   {
+    public void potvrdiAkcija(ActionEvent event) throws SQLException, IOException {
 
         String korisnickoIme = korIme.getText().trim();
         String sifraKorisnika = korSifra.getText().trim();
@@ -71,26 +66,24 @@ public class LoginController implements Initializable {
             if (rs.next()) {
 
                 Parent root = FXMLLoader.load(getClass().getResource(
-                        "/gui/DOTAtracker.fxml"));
+                        "/gui/DotaTracker.fxml"));
                 Stage core = new Stage();
                 core.setScene(new Scene(root));
                 core.setTitle("DOTAtracker");
                 core.show();
                 Stage login = (Stage) otkaziLog.getScene().getWindow();
                 login.close();
-            }
-            else { 
+            } else {
                 ukloniProzor();
             }
-        } 
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
 
         }
     }
-    
-    public void ukloniProzor () throws IOException {
-    
+
+    public void ukloniProzor() throws IOException {
+
         Parent root = FXMLLoader.load(getClass().getResource(
                 "/gui/neispravanLogin.fxml"));
         Stage errorStage = new Stage();
@@ -99,12 +92,11 @@ public class LoginController implements Initializable {
         errorStage.centerOnScreen();
         errorStage.show();
     }
-    
+
     public void otkaziAkcija(ActionEvent event) {
         Stage stage = (Stage) otkaziLog.getScene().getWindow();
         stage.close();
-    
+
     }
-    
-    
+
 }

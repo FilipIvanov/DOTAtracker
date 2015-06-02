@@ -18,23 +18,20 @@ import javafx.stage.Stage;
  * @author WakingBliss
  */
 public class NeispravanLoginController implements Initializable {
-    
-    
-    @FXML 
+
+    @FXML
     private Button pogresanLoginDugme;
-    
-    
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
+
     }
-    
-    public void potvrdiPogresanLogin(ActionEvent event){
-    
+
+    public void potvrdiPogresanLogin(ActionEvent event) {
+
         Stage stage = (Stage) pogresanLoginDugme.getScene().getWindow();
         stage.close();
-    
-    
+
     }
-    
+
 }
